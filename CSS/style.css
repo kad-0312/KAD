@@ -63,12 +63,14 @@ nav {
 ul {
     display: flex; /* Make the ul a flex container */
     flex-wrap: nowrap; /* Ensure items stay on a single line */
+    justify-content: center;
     list-style-type: none;
     margin-top: 2em;
     padding: 0;
     overflow: hidden;
     background-color: #a07157;
-    width:100%
+    width:100%;
+    border-radius: 30px;
 }
 
 li {
@@ -106,3 +108,10 @@ font-family: 'Enriqueta';
 font-size: 60px;
 margin: 0;
 }
+/* 
+#personaldetail {
+background-color:#b87f52;
+} */
+
+
+/*Check font, stick navbar, rearrange cover page, margin between lines*/
