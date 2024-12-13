@@ -1,0 +1,108 @@
+body {
+    background-image: url("../pngtree-man-on-a-mountain-starry-sky-wallpaper-for-mobile-image_2936450.jpg");
+    background-attachment: fixed;
+    background-size:contain;
+    background-blend-mode:lighten;
+}
+
+h1 {
+    display: flex;
+    justify-content: flex-start;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 800;
+    color: white;
+    margin-left: 1em;
+    font-size: 50px;
+    border-block:calc();
+}
+
+.font-effect-fire {
+    color: #b87f52;
+    margin: 0.1em;
+    font-size: 100px;
+}
+
+.font-effect-emboss {
+    color:bisque;
+    font-size:xx-large;
+    margin: 0.7em;
+}
+
+.container {
+    display: flex;
+    align-items: center; 
+    justify-content: space-around;
+}
+
+.image img {
+    width: 340px; 
+    height: 400px;
+    margin-right: 25px;
+}
+
+.introduction {
+    display: flex;
+    flex-direction: column;
+}
+
+
+/*Navigation*/
+nav {
+    position: -webkit-sticky;
+    position: sticky; 
+    top: 0; 
+} */
+.navigation {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    margin-right: 1em;
+    margin-top: 2em;
+}
+
+ul {
+    display: flex; /* Make the ul a flex container */
+    flex-wrap: nowrap; /* Ensure items stay on a single line */
+    list-style-type: none;
+    margin-top: 2em;
+    padding: 0;
+    overflow: hidden;
+    background-color: #a07157;
+    width:100%
+}
+
+li {
+    flex: 1; /* Distribute space equally among li elements */
+    border-right: 2px solid #4d4d4d;
+    display: flex; /* Make li a flex container */
+    align-items: center; /* Center content vertically */
+}
+
+li:last-child {
+    border-right: none;
+}
+
+li a {
+    display: block;
+    color: white;
+    text-align: center;
+    font-size: 20px;
+    font-weight: bold;
+    padding: 14px;
+    text-decoration: none;
+    width: 100%; /* Make a link fill the li element */
+}
+
+li a:hover:not(.active) {
+    background-color: #263b5a;
+}
+
+.title {
+display: flex;
+justify-content: center;
+color: antiquewhite;
+font-weight: 600;
+font-family: 'Enriqueta';
+font-size: 60px;
+margin: 0;
+}
