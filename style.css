@@ -1,0 +1,771 @@
+/* Add a scroll margin to each section */
+section {
+    scroll-margin-top: 70px; /* Offset slightly more than the navbar height */
+}
+
+/* Adjust body padding to account for fixed navbar */
+body {
+    background-image: url("background.png");
+    background-attachment: fixed;
+    background-size: contain;
+    background-blend-mode: lighten;
+    margin: 0;
+    padding-top: 60px; /* Matches navbar height */
+}
+
+/* Navbar styling remains the same */
+nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    z-index: 1000;
+    height: 60px;
+}
+ul {
+    display: flex; /* Make the ul a flex container */
+    flex-wrap: nowrap; /* Ensure items stay on a single line */
+    justify-content: center;
+    list-style-type: none;
+    overflow: hidden;
+    background-color: rgba(26, 35, 49,0.5); /* Semi-transparent background color */
+    width: 100%;
+    margin: 0; /* Remove default margin */
+    padding: 0; /* Remove default padding */
+    align-items:flex-start; /* Center nav links vertically */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5); /* Add subtle shadow for depth */
+    position: fixed; /* Stick to the top of the page */
+    top: 0; /* Stick to the top of the page */
+    z-index: 1000; /* Ensure it appears above other elements */
+}
+
+li {
+    flex: 1; /* Distribute space equally among li elements */
+    border-right: 2px solid #30475e; /* Soft border matching the theme */
+    display: flex; /* Make li a flex container */
+    align-items: center; /* Center content vertically */
+}
+
+li:last-child {
+    border-right: none;
+}
+
+li a {
+    display: block;
+    color: #f1c27d; /* Light golden text for contrast */
+    text-align: center;
+    font-size: 20px;
+    font-weight: bold;
+    font-family: 'Enriqueta', serif;
+    padding: 14px;
+    text-decoration: none;
+    width: 100%; /* Make a link fill the li element */
+    transition: background-color 0.3s, color 0.3s; /* Smooth transitions */
+}
+
+li a:hover:not(.active) {
+    background-color: #3c5a77; /* A hover color slightly brighter than the nav */
+    color: #ffffff; /* Pure white for hover text */
+}
+
+
+/* Other styles */
+h1 {
+    display: flex;
+    justify-content: flex-start;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 800;
+    color: white;
+    margin-left: 0.3em;
+    font-size: 50px;
+    border-block: calc();
+}
+
+.font-effect-fire {
+    color: #b87f52;
+    margin: 0.1em;
+    font-size: 100px;
+}
+
+.font-effect-emboss {
+    color: bisque;
+    font-size: xx-large;
+    margin: 0.7em;
+}
+
+.container {
+    display: flex;
+    align-items: center; 
+    justify-content: space-around;
+    margin: 2.2em;
+}
+
+.image img {
+    width: 340px; 
+    height: 400px;
+    margin-right: 25px;
+}
+
+
+.introduction {
+    display: flex;
+    flex-direction: column;
+    padding-top: 60px; /* Match the navbar height */
+    margin-top: -60px; /* Compensate for padding to avoid extra spacing */
+}
+
+.title {
+    display: flex;
+    justify-content: center;
+    color: #ffcc80; /* Gold for titles */
+    font-weight: 600;
+    font-family: 'Enriqueta', serif;
+    font-size: 60px;
+    margin-top: 0;
+    margin-bottom: 25px;
+}
+/* Personal Detail Section */
+#personaldetail {
+    font-family: 'Arial', sans-serif;
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.5);
+    backdrop-filter: blur(10px);
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    position: relative;
+}
+
+#personaldetail .title, #experience .title {
+    padding: 0;
+    color: #3c5a77;
+}
+
+#personaldetail .title {
+    margin: 0;
+}
+
+/* Content Container */
+.content-container {
+    position: relative;
+    width: 100%;
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 150px;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+
+/* Center Image */
+.center-image img {
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    transition: transform 0.3s ease-in-out;
+    margin: 20px;
+}
+.center-image img:hover {
+    transform: scale(1.1);
+}
+
+/* Detail Boxes */
+.detail-box {
+    position: absolute;
+    background: rgba(0, 0, 0, 0.753);
+    padding: 10px;
+    border-radius: 10%;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transform-origin: center; /* Ensures scaling happens from the center */
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    width: 280px; /* Fixed width */
+    height: 200px; /* Fixed height */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.detail-box:hover {
+    transform: scale(1.1); /* Scaling without changing position */
+    box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Positioning Boxes */
+.top-left {
+    top: 5%;
+    left: 7%;
+}
+
+.top-right {
+    top: 5%;
+    right: 7%;
+}
+
+.bottom-left {
+    bottom: 5%;
+    left: 7%;
+}
+
+.bottom-right {
+    bottom: 5%; 
+    right: 7%;
+}
+
+
+/* Icon customization */
+.iconpersonal {
+    margin-top: 0; /* Remove any margin at the top */
+    width: 100%; /* Let the container take up full available space */
+    display: flex;
+    justify-content: center; /* Centers the icon horizontally */
+    align-items: center; /* Centers the icon vertically */
+    position: relative; /* Allows positioning of the icon */
+}
+
+/* The icon itself */
+.iconpersonal img {
+    width: 50%; /* Adjust the icon size within the container */
+    height: auto; /* Maintain aspect ratio */
+    object-fit: contain; /* Ensures the icon maintains its aspect ratio */
+    max-width: 100%; /* Prevents the icon from overflowing its container */
+    max-height: 100%; /* Prevents the icon from overflowing its container */
+}
+
+/* Ensure no extra space between the icon and the text */
+.details h3, .details p {
+    margin: 0; /* Remove any default margin */
+    padding: 0; /* Remove any padding */
+}
+
+
+#MBTI, #Sagittarius, #Football, #Coding {
+    font-size: 20px;
+    color: #f1c27d;
+}
+
+/* Hobby Section */
+.hobby-container {
+    display: flex; /* Arrange items in a row */
+    justify-content: space-between; /* Distribute space evenly */
+    align-items: center; /* Center items vertically */
+    width: 95%;
+    gap: 15px; /* Space between hobby items */
+}
+
+.hobby-item {
+    display: flex;
+    flex-direction: column; /* Stack icon and text vertically */
+    align-items: center; /* Center-align content */
+    gap: 5px; /* Small gap between icon and text */
+    width: 45%; /* Ensure each hobby takes up 45% of the container */
+}
+
+.hobby-item img {
+    width: 95%; /* Adjust icon size */
+    height: auto;
+    object-fit: contain;
+    max-width: 100%; /* Prevent overflow */
+}
+
+.skills {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
+  .skill {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .skill-icon {
+    width: 130px;
+    height: auto;
+  }
+  .dots {
+    display: flex;
+    gap: 5px;
+  }
+  .dot {
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    background-color: #ccc;
+  }
+  .dot.active {
+    background-color: #00e5ff;
+  }
+
+/* Education Section */
+#education {
+    font-family: 'Arial', sans-serif;
+    background-color: rgba(4, 169, 181, 0.336);
+    padding-top: 20px;
+    padding-bottom: 40px;
+    backdrop-filter: blur(10px);
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    width: 100%;
+}
+/* Timeline Structure */
+.timeline {
+    display: grid;
+    grid-template-columns: 1fr 0.1fr 1fr; /* Left box, time tree, right box */
+    grid-template-rows: auto; /* Allow rows to adjust based on content */
+    gap: 20px;
+    align-items: center;
+    position: relative;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+/* Timeline Items (Left & Right Boxes) */
+.timeline-item {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: 8px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.15);
+    width: 100%;
+    height: 150px; /* Adjust as needed */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.timeline-item.high-school {
+    grid-column: 1 / 2; /* Align on the left */
+    grid-row: 1; /* Place on the first row */
+    height: 200px; /* Reflects a longer duration (2021–2024) */
+}
+
+.timeline-item.university {
+    grid-column: 3 / 4; /* Align on the right */
+    grid-row: 3; /* Place on the last row */
+    height: 120px; /* Reflects a shorter duration (2024–present) */
+}
+
+/* Time Tree */
+.timeline-tree {
+    grid-column: 2 / 3; /* Middle column */
+    grid-row: 1 / span 3; /* Span the full height of the timeline */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    height: 360px; /* Total height of the tree */
+    background: rgba(255, 166, 38, 0.3); /* Transparent guide for the time tree */
+    border-radius: 10%;
+}
+
+.timeline-tree::before {
+    content: '';
+    position: absolute;
+    width: 4px;
+    height: 100%;
+    background-color: #ffa726;
+    z-index: -1;
+}
+
+/* Time Tree Segments */
+.segment {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    position: relative;
+    flex: 1;
+    text-align: center;
+}
+
+.high-school-segment {
+    height: 80%; /* Represents 2021–2024, increased to reflect 80% of the timeline */
+}
+
+.transition-segment {
+    height: 0%; /* Represents the small gap for "2024" */
+}
+
+.university-segment {
+    height: 20%; /* Represents 2024–Present, adjusted to fit remaining space */
+}
+
+.segment span {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    background: #fff;
+    padding: 5px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    font-size: 12px;
+    font-weight: bold;
+    text-align: center;
+    width: auto;
+    height: auto;
+}
+
+.segment span:last-child {
+    width: 44px;
+    height: auto;
+}
+
+.high-school-segment span {
+    top: 0; /* Place "2021" at the top */
+}
+
+.transition-segment span {
+    top: 75%; /* Place "2024" at 80% of the timeline */
+}
+
+.university-segment span {
+    bottom: 0; /* Place "Present" at the bottom */
+}
+
+/* Icons */
+.icon {
+    width: 100px;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: none;
+    flex-shrink: 0;
+    border-radius: 50%;
+    margin: 0 20px;
+}
+
+.icon img {
+    width: 80%;
+    height: 80%;
+}
+
+/* Details Section */
+.details {
+    padding: 10px;
+    flex: 1;
+}
+
+.details h3 {
+    font-size: 25px;
+    margin: 0 0 10px;
+    color: #ff7043;
+}
+
+.details p {
+    margin: 5px 0;
+    font-size: 20px;
+    color: #37474f;
+}
+
+
+/* Experience Section */
+#experience {
+    font-family: 'Arial', sans-serif;
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.5);
+    backdrop-filter: blur(10px);
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    position: relative;
+}
+
+/* Custom Timeline Structure */
+.custom-timeline {
+    display: grid;
+    grid-template-columns: 1fr 0.1fr 1fr; /* Left, Time Tree, Right */
+    grid-template-rows: auto; /* Automatically adjust row height based on content */
+    gap: 20px;
+    position: relative;
+    margin-left: 25px;
+    margin-right: 25px;
+}
+
+/* Custom Timeline Tree */
+.custom-timeline-tree {
+    grid-column: 2 / 3; /* Middle column */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    height: 100%; /* Full height to cover the timeline */
+    justify-content: flex-start; /* Align to the top */
+    background: rgba(255, 166, 38, 0.3); /* Light background for visibility */
+    border-radius: 8%;
+}
+
+.custom-timeline-tree::before {
+    content: '';
+    position: absolute;
+    width: 4px;
+    height: 100%;
+    background-color: #ffa726;
+    z-index: -1;
+    top: 0;
+    bottom: 0;
+}
+
+/* Custom Timeline Items */
+.custom-timeline-item {
+    display: flex;
+    align-items: center;
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: 8px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.15);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    padding: 15px;
+    width: 100%;
+}
+
+/* Timeline items on the left side */
+.custom-timeline-item.left {
+    grid-column: 1 / 2;
+    justify-self: end;
+    align-self:flex-start;
+}
+
+/* Timeline items on the right side */
+.custom-timeline-item.right {
+    grid-column: 3 / 4;
+    justify-self: start;
+    align-self: center;
+}
+
+/* Height Adjustments for Each Timeline Item Based on Their Time */
+.custom-timeline-item.left-2022,
+.custom-timeline-item.right-2022 {
+    height: 120px; /* 2022-2023 duration */
+}
+
+.custom-timeline-item.left-2023,
+.custom-timeline-item.right-2023 {
+    height: 120px; /* 2023-2024 duration */
+}
+
+.custom-timeline-item.left-2024,
+.custom-timeline-item.right-2024 {
+    height: 120px; /* 2024-present duration */
+}
+
+/* Move left 2024 item up using margin-top */
+.custom-timeline-item.left-2024 {
+    height: 120px;
+    margin-top: -175px; /* Adjust this value */
+}
+
+/* Move right 2024 item up using margin-top */
+.custom-timeline-item.right-2024 {
+    height: 120px;
+    margin-top: -200px; /* Adjust this value */
+}
+
+
+/* Custom Icon */
+.custom-icon {
+    width: 150px;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 15px;
+}
+
+.custom-icon img {
+    width: 60%;
+    height: 60%;
+}
+
+/* Custom Details */
+.custom-details {
+    padding: 10px;
+    flex: 1;
+    text-align: left;
+}
+
+.custom-details h3 {
+    font-size: 25px;
+    margin: 0 0 10px;
+    color: #ff7043;
+}
+
+.custom-details p {
+    margin: 5px 0;
+    font-size: 20px;
+    color: #37474f;
+}
+
+/* Time Segments */
+.custom-segment {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: flex-start;
+    position: relative;
+    height: 100px;
+    margin-bottom: 135px; /* Margin for the segments */
+    flex: 1;
+    text-align: center;
+}
+
+.custom-timeline .custom-segment:last-child {
+    margin-bottom: 0; /* Remove bottom margin for the last segment */
+}
+
+.custom-segment span {
+    background: #fff;
+    padding: 5px;
+    border-radius: 10px;
+    font-size: 12px;
+    font-weight: bold;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    width: 45px;
+    height: auto;
+}
+
+/*Projects*/
+/* Project Section */
+#projects {
+    font-family: 'Arial', sans-serif;
+    background-color: rgba(4, 169, 181, 0.336);
+    padding-top: 20px;
+    padding-bottom: 40px;
+    backdrop-filter: blur(10px);
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    width: 100%;
+}
+
+/* Container for Projects */
+.project-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+/* Project Carousel */
+.projects {
+    display: flex;
+    overflow: hidden; /* Hide projects that are out of view */
+    gap: 100px;
+}
+
+/* Each Project Box */
+.project {
+    width: 300px;
+    height: 260px;
+    background-color:#D4AF37;
+    border-radius: 10%;
+    overflow: hidden;
+    text-align: center;
+}
+
+.project img {
+    width: 250px;
+    height: auto;
+    object-fit: cover;
+    margin-left: 20px;
+    margin-right: 20px;
+    border-radius: 10%;
+}
+
+.project .custom-img {
+    width: 163px;  /* Change width for this image */
+    height: auto;
+    object-fit: cover;
+    margin-left: 20px;
+    margin-right: 20px;
+    border-radius: 15%;  /* Slightly different border radius if desired */
+}
+
+.project h3 {
+    font-size: 20px;
+    margin: 10px;
+    color: #4B2C20;
+}
+
+
+.button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #003366; /* Gold background */
+    color: white; /* White text */
+    font-size: 16px;
+    font-weight: bold;
+    text-align: center;
+    text-decoration: none; /* Remove underline */
+    border-radius: 5px; /* Rounded corners */
+    transition: background-color 0.3s ease, transform 0.2s ease;
+  }
+  
+  .button:hover {
+    background-color:#3c5a77; /* Slightly darker gold on hover */
+    transform: scale(1.05); /* Slight scale effect on hover */
+  }
+  
+  .button:active {
+    background-color: #2696d7c7; /* Darker gold when clicked */
+  }
+
+/*Contact*/
+#contact {
+    font-family: 'Arial', sans-serif;
+    background-color: rgba(0, 0, 0, 0.646);
+    padding-top: 20px;
+    padding-bottom: 15px;
+    backdrop-filter: blur(10px);
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    width: 100%;
+  }
+  
+  #contact-title {
+    display: flex;
+    justify-content: center;
+    color: #ffcc80; /* Gold for titles */
+    font-weight: 600;
+    font-family: 'Enriqueta', serif;
+    font-size: 30px;
+    margin-top: 0;
+    margin-bottom: 20px;
+  }
+  
+  #contact-content {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center; /* Vertically align items to the center */
+    color: white;
+    font-size: 20px;
+    width: 100%; /* Ensure content uses full available width */
+  }
+  
+  #contact-content div {
+    display: flex;
+    flex-direction: column; /* Stack images and text vertically */
+    align-items: center; /* Center align the content within each div */
+    text-align: center; /* Ensure the text is centered */
+  }
+  
+  .custom-contact {
+    width: 35px;
+    height: 35px; /* Ensure the images have equal height */
+    object-fit: contain; /* Maintain aspect ratio */
+    margin-bottom: 10px; /* Space between the image and text */
+    background-color: white;
+    border-radius: 50%;
+    padding: 10px;
+  }
+
+  .line {
+    border-top: 2px solid #ffcc80; /* Creates a solid line (adjust thickness and color as needed) */
+    margin: 20px 0; /* Adds space above and below the line */
+    }
+
+
+  #copyright {
+    color: white;
+    margin-left: 10px;
+    margin-bottom: 10px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  }
+  
