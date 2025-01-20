@@ -518,6 +518,7 @@ h1 {
     width: 100%;
 }
 
+
 /* Timeline items on the left side */
 .custom-timeline-item.left {
     grid-column: 1 / 2;
@@ -710,7 +711,7 @@ h1 {
 /*Contact*/
 #contact {
     font-family: 'Arial', sans-serif;
-    background-color: rgba(0, 0, 0, 0.646);
+    background-color: rgba(0, 0, 0, 0.671);
     padding-top: 20px;
     padding-bottom: 15px;
     backdrop-filter: blur(10px);
