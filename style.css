@@ -107,6 +107,7 @@ h1 {
     align-items: center; 
     justify-content: space-around;
     margin: 2.2em;
+    margin-bottom: 3.1em;
 }
 
 .image img {
@@ -778,4 +779,3 @@ h1 {
     margin-bottom: 10px;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
   }
-  
